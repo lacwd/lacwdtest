@@ -7,31 +7,172 @@
       LA Contractor Web Designs | Web Designs For Trades & Contractors | SEO
     </title>
     <link rel="shortcut icon" type="image/jpeg" href="./assets/images/favicon.1.jpg">
-    <!-- Inline critical CSS -->
-<style>
-  /* Critical CSS for hero/nav only */
-  #hero-855 {
-    padding: clamp(13.25rem, 16.82vw, 20.25rem) 1rem;
-    background-color: #f7f7f7;
-    overflow: hidden;
-    position: relative;
-  }
-  #hero-855 .cs-title {
-    font-size: clamp(2.4375rem, 5vw, 3.8125rem);
-    font-family: "Oswald", sans-serif;
-    font-weight: 900;
-    text-align: center;
-    color: var(--headerColor);
-  }
-</style>
+    <style>
+        /* ======================= */
+/* Critical CSS: nav + hero + first button */
+/* ======================= */
 
-<!-- Non-blocking stylesheet load -->
-<link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+:root {
+  --primary: #ee6c03;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+}
 
-<!-- Fallback for no-JS users -->
-<noscript>
-  <link rel="stylesheet" href="style.css">
-</noscript>
+/* Reset and box-sizing */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #efefee;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* =================== */
+/* NAVIGATION (mobile + desktop basics) */
+/* =================== */
+#cs-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  position: relative;
+  z-index: 10000;
+}
+
+#cs-navigation .cs-logo {
+  display: flex;
+  align-items: center;
+}
+
+#cs-navigation .cs-logo img {
+  width: auto;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
+#cs-navigation .cs-toggle {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cs-navigation .cs-ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#cs-navigation .cs-li-link {
+  text-decoration: none;
+  color: var(--headerColor);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#cs-navigation .cs-li-link.cs-active,
+#cs-navigation .cs-li-link:hover {
+  color: var(--primary);
+}
+
+/* =================== */
+/* HERO SECTION */
+/* =================== */
+#hero-855 {
+  padding: clamp(13.25rem, 16.82vw, 20.25rem) 1rem clamp(3.75rem, 7.82vw, 6.25rem);
+  background-color: #f7f7f7;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+#hero-855 .cs-title {
+  font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+  font-family: "Oswald", sans-serif;
+  font-weight: 900;
+  line-height: 1.2em;
+  max-width: 23ch;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+
+#hero-855 .cs-text {
+  font-size: 1rem;
+  line-height: 1.5em;
+  max-width: 33.1875rem;
+  margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
+  color: var(--bodyTextColor);
+}
+
+/* =================== */
+/* FIRST BUTTON (hero call-to-action) */
+/* =================== */
+#hero-855 .cs-button-solid {
+  font-size: 1rem;
+  line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.25rem;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 0 1.5rem;
+}
+
+#hero-855 .cs-button-solid:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #000;
+  z-index: -1;
+  border-radius: 0.25rem;
+  transition: width 0.3s;
+}
+
+#hero-855 .cs-button-solid:hover:before {
+  width: 100%;
+}
+
+/* =================== */
+/* IMAGE (hero, optional above-the-fold) */
+/* =================== */
+#hero-855 .cs-picture {
+  width: 100%;
+  max-width: 35.625rem;
+  height: clamp(25rem, 95vw, 44.5rem);
+  overflow: hidden;
+  position: relative;
+}
+
+#hero-855 .cs-picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body style="background-color:#efefee">
     <!-- ============================================ -->
