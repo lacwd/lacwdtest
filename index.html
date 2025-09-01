@@ -7,7 +7,8 @@
       LA Contractor Web Designs | Web Designs For Trades & Contractors | SEO
     </title>
     <link rel="shortcut icon" type="image/jpeg" href="./assets/images/favicon.1.jpg">
-    <style>
+    <!-- Inline critical CSS -->
+<style>
   /* Critical CSS for hero/nav only */
   #hero-855 {
     padding: clamp(13.25rem, 16.82vw, 20.25rem) 1rem;
@@ -23,7 +24,14 @@
     color: var(--headerColor);
   }
 </style>
-    <link rel="stylesheet" href="style.css" />
+
+<!-- Non-blocking stylesheet load -->
+<link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<!-- Fallback for no-JS users -->
+<noscript>
+  <link rel="stylesheet" href="style.css">
+</noscript>
   </head>
   <body style="background-color:#efefee">
     <!-- ============================================ -->
