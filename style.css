@@ -2086,7 +2086,7 @@ body {
   #steps-1290 {
     padding: var(--sectionPadding);
     position: relative;
-    background-color: var(--bodyTextColorWhite);
+    background-color: #fff;
   }
   #steps-1290 .cs-container {
     /* changes to 1440px at tablet */
@@ -2295,7 +2295,7 @@ body {
     background-color: #fbf9f5;
     position: relative;
     z-index: 1;
-    background-color: #efefed;
+    background-color: var(--bodyTextColorWhite);
   }
   #sbs-2377 .cs-container {
     width: 100%;
@@ -2437,7 +2437,7 @@ body {
   #services-2377 {
     padding: var(--sectionPadding);
     padding-top: 0;
-    background-color: #efefed;
+    background-color: var(--bodyTextColorWhite);
   }
 
   #services-2377 .cs-container {
@@ -2467,7 +2467,7 @@ body {
     /* 16px - 32px */
     padding: clamp(1rem, 3vw, 2rem);
     border-radius: 1rem;
-    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.14);
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
     grid-column: span 12;
@@ -3188,6 +3188,7 @@ body {
 @media only screen and (min-width: 0rem) {
   #services-343 {
     padding: var(--sectionPadding);
+    background-color: var(--bodyTextColorWhite);
   }
   #services-343 .cs-title {
     font-size: 5rem;
@@ -3368,6 +3369,7 @@ body {
     z-index: 1;
     /* Prevents overflow from the image going off screen */
     overflow: hidden;
+    background-color: #fff;
   }
   #gallery-1374 .cs-container {
     width: 100%;
@@ -3586,5 +3588,166 @@ body {
 @media only screen and (min-width: 37.5rem) {
   #gallery-1374 .cs-item {
     grid-column: span 6;
+  }
+}
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-345 {
+    /* centers the button */
+    text-align: center;
+    padding: var(--sectionPadding);
+    background-color: #fff;
+  }
+  #services-345 .cs-container {
+    width: 100%;
+    max-width: 90rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #services-345 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+
+  #services-345 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #services-345 .cs-item {
+    list-style: none;
+    width: 100%;
+    max-width: 31.25rem;
+    /* 16px - 32px */
+    padding: clamp(1rem, 2vw, 2rem);
+    border-radius: 1rem;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  #services-345 .cs-item:hover {
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 50px;
+    transform: translateY(-0.4375rem);
+  }
+  #services-345 .cs-item:hover .cs-picture:before {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+  #services-345 .cs-link {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #services-345 .cs-picture {
+    width: 5rem;
+    height: 5rem;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #fff5e6;
+    position: relative;
+    z-index: 1;
+  }
+  #services-345 .cs-icon {
+    height: 3.5rem;
+    width: auto;
+  }
+  #services-345 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 0.75rem;
+    color: var(--headerColor);
+    transition: color 0.3s;
+  }
+  #services-345 .cs-item-text {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    transition: color 0.3s;
+  }
+  #services-345 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #services-345 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #services-345 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-345 .cs-card-group {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+  #services-345 .cs-item {
+    width: 48.9%;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #services-345 .cs-item {
+    /* we do this so it's stackable. You can add any number of reviews you want and they will stack and center in the middle. We dont use grid because if you have an odd number of cards, they don't stay centered, they align with their grid lines. This way its more FLEX-ible*/
+    width: clamp(23.47%, 22vw, 23.955%);
   }
 }
