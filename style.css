@@ -1,6 +1,6 @@
 :root {
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-  --primary: rgb(238, 108, 3);
+  --primary: rgb(238, 108, 3) !important;
   --primaryLight: #ffba43;
   --secondary: #ffba43;
   --secondaryLight: #ffba43;
@@ -3753,5 +3753,10 @@ body {
   #services-345 .cs-item {
     /* we do this so it's stackable. You can add any number of reviews you want and they will stack and center in the middle. We dont use grid because if you have an odd number of cards, they don't stay centered, they align with their grid lines. This way its more FLEX-ible*/
     width: clamp(23.47%, 22vw, 23.955%);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: rgb(238, 108, 3);
   }
 }
