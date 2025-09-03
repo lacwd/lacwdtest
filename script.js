@@ -107,3 +107,42 @@ class FAQFilter {
 }
 
 new FAQFilter();
+
+function isiOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+if (isiOS()) {
+  // Force the --primary CSS variable
+  document.documentElement.style.setProperty("--primary", "rgb(238,108,3)");
+
+  // Force all elements that might use the primary color
+  const allElements = document.querySelectorAll("*");
+
+  allElements.forEach((el) => {
+    const computed = getComputedStyle(el);
+
+    // Force text color if it matches your primary variable or is close
+    if (
+      computed.color === "rgb(238,108,3)" ||
+      computed.color === "rgb(238, 108, 3)"
+    ) {
+      el.style.color = "rgb(238,108,3)";
+    }
+
+    // Force background color if it matches your primary
+    if (
+      computed.backgroundColor === "rgb(238,108,3)" ||
+      computed.backgroundColor === "rgb(238, 108, 3)"
+    ) {
+      el.style.backgroundColor = "rgb(238,108,3)";
+    }
+
+    // Optional: force fill for SVGs (like your logo)
+    if (el.tagName.toLowerCase() === "svg" || el.querySelector("svg")) {
+      el.querySelectorAll("*").forEach((svgEl) => {
+        svgEl.style.fill = "rgb(238,108,3)";
+      });
+    }
+  });
+}
