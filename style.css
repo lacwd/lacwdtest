@@ -1,6 +1,6 @@
 :root {
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-  --primary: #ee6c03;
+  --primary: rgb(238, 108, 3);
   --primaryLight: #ffba43;
   --secondary: #ffba43;
   --secondaryLight: #ffba43;
@@ -58,7 +58,7 @@
 }
 html,
 body {
-  color-scheme: only light;
+  color-scheme: only light !important;
 }
 body {
   margin: 0;
