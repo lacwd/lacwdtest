@@ -56,6 +56,10 @@
   font-weight: 700;
   src: url("./assets/fonts/oswald-v56-latin-700.woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+html,
+body {
+  color-scheme: only light;
+}
 body {
   margin: 0;
   padding: 0;
