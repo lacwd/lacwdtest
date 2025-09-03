@@ -1356,7 +1356,7 @@ body {
   #hero-855 .cs-title {
     /* 39px - 61px */
     font-size: clamp(2.4375rem, 5vw, 3.8125rem);
-    font-family: "Oswald", sans-serif;
+    font-family: "Oswald", "Arial Narrow", "Arial", sans-serif;
     font-weight: 900;
     line-height: 1.2em;
     text-align: center; /* 23 characters including spaces wide */
