@@ -679,7 +679,6 @@ body {
   #cs-navigation .cs-social-icon {
     width: 1.25rem;
     height: auto;
-    opacity: 0.6;
     display: block;
     transition: opacity 0.3s;
   }
@@ -878,6 +877,9 @@ body {
   }
   #cs-navigation .cs-drop-li3 {
     list-style: none;
+  }
+  #cs-navigation .cs-drop3-main:hover .cs-drop-icon {
+    filter: brightness(0) invert(1); /* turns it white */
   }
   /* #cs-navigation .cs-drop3 {
     columns: 3; 
@@ -4196,7 +4198,7 @@ body {
     width: 1.25rem;
     height: 1.25rem;
     margin-left: 0.75rem;
-    background: #a0a3bd;
+    background: #fafbfd;
     border-radius: 50%;
     display: flex;
     justify-content: center;
