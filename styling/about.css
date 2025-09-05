@@ -653,7 +653,6 @@ body {
   #cs-navigation .cs-social-icon {
     width: 1.25rem;
     height: auto;
-    opacity: 0.6;
     display: block;
     transition: opacity 0.3s;
   }
