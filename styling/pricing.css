@@ -871,6 +871,9 @@ body {
   #cs-navigation .cs-drop-li3 {
     list-style: none;
   }
+  #cs-navigation .cs-drop3-main:hover .cs-drop-icon {
+    filter: brightness(0) invert(1); /* turns it white */
+  }
   /* #cs-navigation .cs-drop3 {
     columns: 3; 
     -webkit-columns: 3;
@@ -1078,6 +1081,7 @@ body {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column-reverse;
     align-items: center;
     /* prevents flexbox from squishing it */
     flex: none;
